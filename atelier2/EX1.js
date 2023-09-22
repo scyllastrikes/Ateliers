@@ -4,4 +4,5 @@ function calcul(x, y) {
     else
     return y * pi}
 
+    
 console.log(calcul(2, 3))
