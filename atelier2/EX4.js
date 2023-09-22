@@ -15,10 +15,10 @@ function tri(T){
 }
 tri(T)
 console.log(T)
-T.append(12)
+T.push(12)
 console.log(T)
 function reverse_list(T){
-    for (let i=0;i<T.length;i++){
+    for (let i=1;i<T.length;i++){
         let temp=T[i]
         T[i]=T[T.length-i]
         T[T.length-i]=temp
