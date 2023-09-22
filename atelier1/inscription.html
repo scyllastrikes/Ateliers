@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="acceuil.html">Home</a></li>
+                <li><a href="tournois_matches.html">Tournois et Matches</a></li>
+                <li><a href="liste_joueurs.html">Liste joueurs</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="x"> <img src="img1.png" alt="Logo"></section>
+   
+    <section>
+        <h1>Inscription au match</h1>
+        <form action="traitement_inscription.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]{2,}" title="Veuillez entrer un nom valide (lettres uniquement)">
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]{2,}" title="Veuillez entrer un prénom valide (lettres uniquement)">
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" title="Veuillez entrer un numéro de téléphone valide (10 chiffres)">
+            
+            <label for="date_match">Date du match :</label>
+            <input type="date" id="date_match" name="date_match" required min="2023-09-01" max="2023-12-30">
+            
+            <label for="lieu_match">Lieu du match :</label>
+            <select id="lieu_match" name="lieu_match">
+                <option value="stade1">Stade 1</option>
+                <option value="stade2">Stade 2</option>
+                <option value="stade3">Stade 3</option>
+            </select>
+            
+            <input type="submit" value="S'inscrire">
+        </form>
+    </section>
+    
+    <footer>
+        <p>Contactez-nous par email : <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <p>Adresse : 123, Rue de l'Exemple, Ville</p>
+    </footer>
+    <link rel="stylesheet" type="text/css" href="inscription.css">
+</body>
+</html>
