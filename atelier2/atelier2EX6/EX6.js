@@ -1,4 +1,10 @@
 let paragrapheId=document.getElementById("paragraphe-id")
+let toggle = true 
 function changer(){
-    paragrapheId.innerHTML="Le texte du paragraphe d'id paragraphe-id a été modifié"
+    toggle= !toggle
+    if (toggle) {
+        paragrapheId.innerHTML = "Text changed!"
+    } else {
+        paragrapheId.innerHTML = "Press me"
+    }
 }
