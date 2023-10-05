@@ -74,8 +74,3 @@ emailInput.addEventListener("keyup", function() {
         
     }
 })
-function submitOK(){
-    let ins= document.getElementById("ins")
-    ins.textContent="Inscription réussie"
-
-}
