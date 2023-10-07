@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ELHTML3</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form action="contact.php" method="get">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required><br><br>
+        <label for="adresse">Adresse :</label>
+        <textarea id="adresse" name="adresse" required></textarea><br><br>
+        <label for="codepostal">Code postal :</label>
+        <select id="codepostal" name="codepostal" required>
+            <option value="" selected="selected"></option>
+            <option value="6093">6093</option>
+            <option value="6093">6094</option>
+            <option value="6093">6096</option>
+        </select><br><br>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+        <input type="reset" value="Supprimer DB!!!!" id="cancel-button">
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $("#cancel-button").click(function (e) {
+                e.preventDefault(); 
+                $.ajax({
+                    url: "delete.php", 
+                    type: "POST",
+                    data: {}, 
+                    success: function (response) {
+                        
+                        console.log(response);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+        <
+    </form>
+</body>
+</html>
