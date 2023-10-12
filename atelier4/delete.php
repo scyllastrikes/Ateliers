@@ -7,9 +7,7 @@ try {
     $connexion = new PDO($dsn, $utilisateur, $motdepasse);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $dbname = "testex3"; // Replace with your database name
-
-    // Drop the database (be careful!)
+    $dbname = "testex3";
     $sql = "DROP DATABASE IF EXISTS $dbname";
     $connexion->exec($sql);
 
